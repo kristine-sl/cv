@@ -3,7 +3,7 @@ import { Divider, Icon, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import image from '../images/profile_image.png';
+import image from '../images/profile_image.webp';
 
 function Profile() {
   return (
