@@ -57,7 +57,7 @@ function Header() {
             color="secondary"
             id="language-button"
             aria-label="Change language"
-            aria-controls="basic-menu"
+            aria-controls="language-menu"
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
             onClick={handleClick}
@@ -65,7 +65,7 @@ function Header() {
             <Icon component={Language} />
           </IconButton>
           <Menu
-            id="language-meny"
+            id="language-menu"
             anchorEl={anchorEl}
             open={open}
             onClose={handleClose}
