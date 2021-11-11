@@ -1,0 +1,17 @@
+{
+    "header.contact": "Ta kontakt",
+
+    "profile.jobTitle": "Senior konsulent",
+    "profile.about": "Om meg", 
+    "profile.about.description": "Lorem Ipsum", 
+    "profile.info": "Info", 
+    "profile.info.location": "Oslo, Norge", 
+    "profile.references": "Referanser", 
+    "profile.references.description": "Referanser gis ved forespørsel.", 
+
+    "categories.experience": "Erfaring", 
+    "categories.education": "Utdanning", 
+    "categories.research": "Forskning", 
+    "categories.other": "Annet", 
+    "categories.lookingFor": "Hva jeg ser etter"
+}

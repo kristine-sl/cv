@@ -1,0 +1,22 @@
+[
+  {
+    "startYear": 2019,
+    "title": "Senior konsulent",
+    "subtitle": "Visma",
+    "description": "Lorem Ipsum"
+  },
+  {
+    "startYear": 2017,
+    "endYear": 2019,
+    "title": "Konsulent og utvikler",
+    "subtitle": "TietoEVRY",
+    "description": "Lorem Ipsum"
+  },
+  {
+    "startYear": 2015,
+    "endYear": 2017,
+    "title": "Masterstipendiat",
+    "subtitle": "Westerdals Oslo ACT",
+    "description": "Lorem Ipsum"
+  }
+]
