@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion-icons/fa-brands": "^3.19.0",
+    "@emotion-icons/material": "^3.14.0",
+    "@emotion-icons/material-outlined": "^3.14.0",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
     "@mui/material": "^5.1.0",
@@ -13,7 +16,6 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "emotion-icons": "^3.27.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-flag-kit": "^1.0.0",
