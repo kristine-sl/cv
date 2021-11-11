@@ -35,12 +35,14 @@ function Header() {
           <IconButton
             href="https://www.linkedin.com/in/kristinesundtlorentzen/"
             color="secondary"
+            aria-label="LinkedIn.com"
           >
             <Icon component={Linkedin} />
           </IconButton>
           <IconButton
             href="https://www.linkedin.com/in/kristinesundtlorentzen/"
             color="secondary"
+            aria-label="Github.com"
           >
             <Icon component={Github} />
           </IconButton>

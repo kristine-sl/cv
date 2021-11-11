@@ -43,7 +43,7 @@ function Timeline({ data }: TimelineProps) {
             {item.startYear} - {item.endYear}
           </Typography>
           <Typography variant="h3">{item.title}</Typography>
-          <Typography variant="subtitle2" sx={{ mb: 1 }}>
+          <Typography variant="subtitle2" sx={{ mb: 1 }} component="span">
             {item.subtitle}
           </Typography>
           <Typography variant="body2">{item.description}</Typography>

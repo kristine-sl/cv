@@ -29,7 +29,7 @@ function Profile() {
           }}
         />
         <Typography variant="h1">Kristine S. Lorentzen</Typography>
-        <Typography variant="subtitle1">
+        <Typography variant="subtitle1" component="span">
           <FormattedMessage id="profile.jobTitle" />
         </Typography>
       </Box>
