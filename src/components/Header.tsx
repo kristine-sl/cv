@@ -59,7 +59,7 @@ function Header() {
             color="secondary"
             id="language-button"
             aria-label="Change language"
-            aria-controls="language-menu"
+            aria-controls={open ? 'language-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
             onClick={handleClick}
