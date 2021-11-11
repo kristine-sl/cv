@@ -1,14 +1,14 @@
 import { EmotionIcon } from '@emotion-icons/emotion-icon';
 import { Biotech } from '@emotion-icons/material';
-import { Box, Card, CardContent, Grid, Icon, Typography } from '@mui/material';
 import {
   Article,
   Help,
   School,
   WorkOutline,
-} from 'emotion-icons/material-outlined';
+} from '@emotion-icons/material-outlined';
+import { Box, Card, CardContent, Grid, Icon, Typography } from '@mui/material';
 import React, { ReactNode } from 'react';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import education from '../data/education.json';
 import experience from '../data/experience.json';
 import Timeline from './Timeline';
@@ -46,8 +46,6 @@ function Category(props: CategoryProps) {
 }
 
 function Categories() {
-  const intl = useIntl();
-
   return (
     <Grid container spacing={2} direction="column">
       <Grid item>
