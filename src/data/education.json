@@ -2,21 +2,21 @@
   {
     "startYear": 2015,
     "endYear": 2017,
-    "title": "Master - Applied Computer Science",
-    "subtitle": "Westerdals Oslo ACT",
-    "description": "Lorem Ipsum"
+    "title": "education.master.title",
+    "subtitle": "education.master.subtitle",
+    "description": "education.master.description"
   },
   {
     "startYear": 2012,
     "endYear": 2015,
-    "title": "Bachelor - Programmering",
-    "subtitle": "NITH / Westerdals Oslo ACT",
-    "description": "Lorem Ipsum"
+    "title": "education.bachelor.title",
+    "subtitle": "education.bachelor.subtitle",
+    "description": "education.bachelor.description"
   },
   {
     "startYear": 2009,
     "endYear": 2012,
-    "title": "Generell studiekompetanse",
-    "subtitle": "Ski Videregående"
+    "title": "education.generalAdmission.title",
+    "subtitle": "education.generalAdmission.subtitle"
   }
 ]

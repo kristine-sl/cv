@@ -13,5 +13,24 @@
     "categories.education": "Utdanning", 
     "categories.research": "Forskning", 
     "categories.other": "Annet", 
-    "categories.lookingFor": "Hva jeg ser etter"
+    "categories.lookingFor": "Hva jeg ser etter",
+
+    "experience.visma.title": "Senior konsulent", 
+    "experience.visma.subtitle": "Visma", 
+    "experience.visma.description": "Lorem Ipsum", 
+    "experience.tietoevry.title": "Konsulent og utvikler", 
+    "experience.tietoevry.subtitle": "TietoEVRY", 
+    "experience.tietoevry.description": "Lorem Ipsum", 
+    "experience.westerdals.title": "Masterstipendiat", 
+    "experience.westerdals.subtitle": "Westerdals Oslo ACT", 
+    "experience.westerdals.description": "Lorem Ipsum", 
+
+    "education.master.title": "Master - Applied Computer Science", 
+    "education.master.subtitle": "Westerdals Oslo ACT", 
+    "education.master.description": "Lorem Ipsum", 
+    "education.bachelor.title": "Bachelor - Programmering", 
+    "education.bachelor.subtitle": "NITH / Westerdals Oslo ACT", 
+    "education.bachelor.description": "Lorem Ipsum", 
+    "education.generalAdmission.title": "Generell studiekompetanse", 
+    "education.generalAdmission.subtitle": "Ski Videregående"
 }

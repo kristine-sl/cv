@@ -1,22 +1,22 @@
 [
   {
     "startYear": 2019,
-    "title": "Senior konsulent",
-    "subtitle": "Visma",
-    "description": "Lorem Ipsum"
+    "title": "experience.visma.title",
+    "subtitle": "experience.visma.subtitle",
+    "description": "experience.visma.description"
   },
   {
     "startYear": 2017,
     "endYear": 2019,
-    "title": "Konsulent og utvikler",
-    "subtitle": "TietoEVRY",
-    "description": "Lorem Ipsum"
+    "title": "experience.tietoevry.title",
+    "subtitle": "experience.tietoevry.subtitle",
+    "description": "experience.tietoevry.description"
   },
   {
     "startYear": 2015,
     "endYear": 2017,
-    "title": "Masterstipendiat",
-    "subtitle": "Westerdals Oslo ACT",
-    "description": "Lorem Ipsum"
+    "title": "experience.westerdals.title",
+    "subtitle": "experience.westerdals.subtitle",
+    "description": "experience.westerdals.description"
   }
 ]
