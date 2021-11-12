@@ -1,7 +1,30 @@
-[{
-    "projectType": "Research project", 
-    "title": "Those Who Fail the Introductory Computer Programming Course in Higher Education", 
-    "publicationDate": "Nov 2016", 
-    "publication": "NOKOBIT",
-    "description": "A paper which explores why around a third of students taking an introductory course in programming will fail, and what the school can do to minimise this number."
-}]
+[
+    {
+        "type": "research.researchProject1.type",
+        "title": "research.researchProject1.title",
+        "link": "https://www.researchgate.net/publication/323550786_THOSE_WHO_FAIL_THE_INTRODUCTORY_COMPUTER_PROGRAMMING_COURSE_IN_HIGHER_EDUCATION",
+        "date": "2016-11-01T00:00:00.000", 
+        "publication": "research.researchProject1.publication",
+        "description": "research.researchProject1.description"
+    }, 
+    {
+        "type": "research.researchProject2.type",
+        "title": "research.researchProject2.title",
+        "link": "https://www.semanticscholar.org/paper/Sensors-in-Your-Clothes%3A-Design-and-Development-of-Lorentzen-Gr%C3%B8nli/afe3c6f3270267f3ee8c72f5860342d0ef479319", 
+        "date": "2016-08-01T00:00:00.000", 
+        "publication": "research.researchProject2.publication",
+        "description": "research.researchProject2.description"
+    }, 
+    {
+        "type": "research.master.type",
+        "title": "research.master.title",
+        "date": "2017-05-01T00:00:00.000", 
+        "description": "research.master.description"
+    },
+    {
+        "type": "research.bachelor.type",
+        "title": "research.bachelor.title",
+        "date": "2015-05-01T00:00:00.000", 
+        "description": "research.bachelor.description"
+    }
+]

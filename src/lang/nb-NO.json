@@ -32,5 +32,23 @@
     "education.bachelor.subtitle": "NITH / Westerdals Oslo ACT", 
     "education.bachelor.description": "Lorem Ipsum", 
     "education.generalAdmission.title": "Generell studiekompetanse", 
-    "education.generalAdmission.subtitle": "Ski Videregående"
+    "education.generalAdmission.subtitle": "Ski Videregående",
+
+    "research.researchProject1.type": "Research project", 
+    "research.researchProject1.title": "Those Who Fail the Introductory Computer Programming Course in Higher Education", 
+    "research.researchProject1.publication": "NOKOBIT",
+    "research.researchProject1.description": "A paper which explores why around a third of students taking an introductory course in programming will fail, and what the school can do to minimise this number.",
+
+    "research.researchProject2.type": "Research project",
+    "research.researchProject2.title": "Sensors in Your Clothes: Design and Development of a Prototype",
+    "research.researchProject2.publication": "13th International Conference, MobiWIS 2016, Vienna, Austria",
+    "research.researchProject2.description": "Wearable computing is fast advancing as a preferred approach for integrating software solutions not only in our environment, but also in our everyday garments to exploit the numerous information sources we constantly interact with. This paper explores this context further by showing the possible use of wearable sensor technology for information critical information systems, through the design and development of a proof-of-concept prototype.",
+
+    "research.master.type": "Masteravhandling",
+    "research.master.title": "Visual Analytics on a mobile surface: Aiding emergencies in multi-story buildings",
+    "research.master.description": "This paper discusses the challenges of visualising data about fire emergencies. Because of the stress experienced during such situations, it is important to consider human behaviour during emergencies, and the most efficient ways of displaying data. In addition, due to the fact that people generally only have access to their mobile phones during evacuations, this paper focuses on developing an emergency aid application for a mobile screen. The paper also shows how indoor location data can be utilised efficiently to aid during emergency evacuations, and how list distortion can be used to display info about the floors in a building.",
+
+    "research.bachelor.type": "Hovedprosjekt, Bachelor",
+    "research.bachelor.title": "Simuleringsverktøy for passasjerflyt gjennom Avinors lufthavner",
+    "research.bachelor.description": "I denne rapporten beskrives prosessen rundt å utvikle et brukervennlig simuleringsverkøy for simulering av trafikk fra tilbringertjeneste til sikkerhetskontroll på Oslo Lufthavn og andre liknende områder. "
 }
