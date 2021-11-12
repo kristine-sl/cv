@@ -9,7 +9,7 @@ import { Grid } from '@mui/material';
 import React from 'react';
 import education from '../../data/education.json';
 import experience from '../../data/experience.json';
-import Timeline from '../Timeline';
+import Timeline from './Timeline';
 import Category from './Category';
 
 function Categories() {

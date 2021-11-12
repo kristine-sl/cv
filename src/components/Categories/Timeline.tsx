@@ -1,6 +1,7 @@
 import { Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 interface TimelineItem {
   startYear: number;
@@ -42,11 +43,15 @@ function Timeline({ data }: TimelineProps) {
           <Typography variant="body2" sx={{ mt: '-2px' }}>
             {item.startYear} - {item.endYear}
           </Typography>
-          <Typography variant="h3">{item.title}</Typography>
-          <Typography variant="subtitle2" sx={{ mb: 1 }} component="span">
-            {item.subtitle}
+          <Typography variant="h3">
+            <FormattedMessage id={item.title} />
           </Typography>
-          <Typography variant="body2">{item.description}</Typography>
+          <Typography variant="subtitle2" sx={{ mb: 1 }} component="span">
+            <FormattedMessage id={item.subtitle} />
+          </Typography>
+          <Typography variant="body2">
+            <FormattedMessage id={item.description} />
+          </Typography>
         </Grid>
       ))}
     </Grid>
