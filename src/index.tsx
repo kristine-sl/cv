@@ -18,7 +18,7 @@ function getMessages() {
 const theme = createTheme({
   palette: {
     primary: {
-      main: blueGrey[800],
+      main: blueGrey[900],
     },
     secondary: {
       main: deepOrange['A700'],

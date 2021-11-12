@@ -1,13 +1,13 @@
 import { Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
-import Categories from './Categories';
-import Profile from './Profile';
+import Categories from './Categories/Categories';
+import Profile from './Profile/Profile';
 
 function Content() {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12} md={5} lg={4}>
+      <Grid item xs={12} md={5} lg={4} xl={3}>
         <Box sx={{ py: 2, pl: 2, pr: { xs: 2, md: 0 } }}>
           <Profile />
         </Box>

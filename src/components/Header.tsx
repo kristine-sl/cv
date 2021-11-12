@@ -49,7 +49,6 @@ function Header() {
           <Box sx={{ flexGrow: 1 }} />
           <Button
             href="mailto:kristine.sundt.lorentzen@gmail.com"
-            startIcon={<Icon component={Email} />}
             variant="outlined"
             color="secondary"
           >
