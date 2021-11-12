@@ -47,6 +47,7 @@ const theme = createTheme({
       fontFamily: 'Red Hat Display',
       fontSize: '1.1rem',
       fontWeight: 500,
+      lineHeight: '1.5',
     },
     h4: {
       fontFamily: 'Red Hat Display',
@@ -63,7 +64,10 @@ const theme = createTheme({
     },
     subtitle2: {
       fontFamily: 'Red Hat Display',
-      fontWeight: 400,
+      fontWeight: 500,
+      fontSize: '0.9rem',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
     },
     button: {
       fontFamily: 'Red Hat Display',
@@ -78,6 +82,7 @@ const theme = createTheme({
     body2: {
       fontFamily: 'Red Hat Display',
       fontSize: '0.9rem',
+      lineHeight: '1.55',
     },
   },
 });
