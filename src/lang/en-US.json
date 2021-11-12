@@ -1,3 +1,17 @@
 {
-    "category.about": "About me"
+    "header.contact": "Contact me",
+
+    "profile.jobTitle": "Senior developer",
+    "profile.about": "About me", 
+    "profile.about.description": "Lorem Ipsum", 
+    "profile.info": "Info", 
+    "profile.info.location": "Oslo, Norway", 
+    "profile.references": "References", 
+    "profile.references.description": "References are provided by request", 
+
+    "categories.experience": "Experience", 
+    "categories.education": "Education", 
+    "categories.research": "Research", 
+    "categories.other": "Other", 
+    "categories.lookingFor": "What I am looking for"
 }
