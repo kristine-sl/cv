@@ -1,5 +1,5 @@
 import { Github, Linkedin } from '@emotion-icons/fa-brands';
-import { Email, Language } from '@emotion-icons/material';
+import { Language } from '@emotion-icons/material';
 import {
   AppBar,
   Box,
