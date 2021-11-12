@@ -49,9 +49,11 @@ function Timeline({ data }: TimelineProps) {
           <Typography variant="subtitle2" sx={{ mb: 1 }} component="span">
             <FormattedMessage id={item.subtitle} />
           </Typography>
-          <Typography variant="body2">
-            <FormattedMessage id={item.description} />
-          </Typography>
+          {item.description && (
+            <Typography variant="body2">
+              <FormattedMessage id={item.description} />
+            </Typography>
+          )}
         </Grid>
       ))}
     </Grid>
