@@ -11,19 +11,19 @@ function Info() {
         <FormattedMessage id="profile.info" />
       </Typography>
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-        <Icon component={Place} sx={{ mr: 2, opacity: '0.5' }}></Icon>
+        <Icon component={Place} sx={{ mr: 2, color: 'text.disabled' }}></Icon>
         <Typography variant="body1">
           <FormattedMessage id="profile.info.location" />
         </Typography>
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-        <Icon component={Email} sx={{ mr: 2, opacity: '0.5' }}></Icon>
+        <Icon component={Email} sx={{ mr: 2, color: 'text.disabled' }}></Icon>
         <Typography variant="body1">
           kristine.sundt.lorentzen@gmail.com
         </Typography>
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-        <Icon component={Phone} sx={{ mr: 2, opacity: '0.5' }}></Icon>
+        <Icon component={Phone} sx={{ mr: 2, color: 'text.disabled' }}></Icon>
         <Typography variant="body1">+47 932 16 768</Typography>
       </Box>
     </Box>
