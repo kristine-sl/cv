@@ -1,7 +1,11 @@
 import { Divider, Grid, Link, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
 import { FormattedMessage } from 'react-intl';
+
+const capitalizeFirstLetter = (word: string) => {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+};
+
 interface Article {
   type: string;
   title: string;
@@ -16,11 +20,7 @@ interface ArticlesProps {
   data: Article[];
 }
 
-function capitalizeFirstLetter(word: string) {
-  return word.charAt(0).toUpperCase() + word.slice(1);
-}
-
-function Articles({ data }: ArticlesProps) {
+export const Articles = ({ data }: ArticlesProps) => {
   const dateOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'short',
@@ -34,9 +34,10 @@ function Articles({ data }: ArticlesProps) {
         <>
           {index !== 0 && <Divider variant="middle" sx={{ mt: 2 }} />}
           <Grid item>
-            <Typography variant="subtitle2" component="span" color="secondary">
+            <Typography variant="subtitle2" component="span">
               <FormattedMessage id={article.type} />
             </Typography>
+
             {article.link ? (
               <Link
                 href={article.link}
@@ -51,10 +52,10 @@ function Articles({ data }: ArticlesProps) {
                 <FormattedMessage id={article.title} />
               </Typography>
             )}
+
             <Typography
               variant="body2"
               sx={{ mb: 2, display: 'flex', alignItems: 'center' }}
-              color="text.secondary"
             >
               <Box sx={{ whiteSpace: 'nowrap', display: 'flex' }}>
                 {capitalizeFirstLetter(
@@ -82,7 +83,8 @@ function Articles({ data }: ArticlesProps) {
                 </>
               )}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+
+            <Typography variant="body2">
               <FormattedMessage id={article.description} />
             </Typography>
           </Grid>
@@ -90,6 +92,4 @@ function Articles({ data }: ArticlesProps) {
       ))}
     </Grid>
   );
-}
-
-export default Articles;
+};

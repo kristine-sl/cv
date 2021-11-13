@@ -7,17 +7,17 @@ import {
 } from '@emotion-icons/material-outlined';
 import { Grid } from '@mui/material';
 import { useTheme } from '@mui/system';
-import React, { useCallback, useRef } from 'react';
+import { useCallback, useRef } from 'react';
 import education from '../../data/education.json';
 import experience from '../../data/experience.json';
 import other from '../../data/other.json';
 import research from '../../data/research.json';
 import { useChildrenHeights } from '../../hooks/useChildrenHeights';
-import Articles from './Articles';
-import Category from './Category';
-import Timeline from './Timeline';
+import { Articles } from './Articles';
+import { Category } from './Category';
+import { Timeline } from './timeline/Timeline';
 
-function Categories() {
+export const Categories = () => {
   const theme = useTheme();
 
   const gridRef = useRef<HTMLDivElement | null>(null);
@@ -47,26 +47,28 @@ function Categories() {
           <Timeline data={experience} />
         </Category>
       </Grid>
+
       <Grid item xs order={{ xs: 2, xl: 4 }}>
         <Category header="categories.education" icon={School}>
           <Timeline data={education} />
         </Category>
       </Grid>
+
       <Grid item xs order={{ xs: 3, xl: 2 }}>
         <Category header="categories.research" icon={Biotech}>
           <Articles data={research} />
         </Category>
       </Grid>
+
       <Grid item xs order={{ xs: 4, xl: 5 }}>
         <Category header="categories.other" icon={Article}>
           <Articles data={other} />
         </Category>
       </Grid>
+
       <Grid item xs order={{ xs: 5, xl: 3 }}>
         <Category header="categories.lookingFor" icon={Help}></Category>
       </Grid>
     </Grid>
   );
-}
-
-export default Categories;
+};

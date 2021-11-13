@@ -1,10 +1,9 @@
 import { Grid } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
-import Categories from './Categories/Categories';
-import Profile from './Profile/Profile';
+import { Categories } from './categories/Categories';
+import { Profile } from './profile/Profile';
 
-function Content() {
+export const Content = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} md={5} lg={4} xl={3}>
@@ -26,6 +25,4 @@ function Content() {
       </Grid>
     </Grid>
   );
-}
-
-export default Content;
+};

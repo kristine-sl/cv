@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import { TimelineMarker } from './TimelineMarker';
 
 interface TimelineItem {
   startYear: number;
@@ -11,26 +11,11 @@ interface TimelineItem {
   description?: string;
 }
 
-export interface TimelineProps {
+interface TimelineProps {
   data: TimelineItem[];
 }
 
-function TimelineMarker() {
-  return (
-    <Box
-      sx={{
-        width: '12px',
-        height: '12px',
-        bgcolor: 'secondary.main',
-        borderRadius: '50%',
-        position: 'absolute',
-        left: '-7px',
-      }}
-    />
-  );
-}
-
-function Timeline({ data }: TimelineProps) {
+export const Timeline = ({ data }: TimelineProps) => {
   return (
     <>
       {data.map((item, index) => (
@@ -49,7 +34,6 @@ function Timeline({ data }: TimelineProps) {
             variant="subtitle2"
             component="div"
             sx={{ position: 'relative', top: -4 }}
-            color="secondary"
           >
             {item.startYear} - {item.endYear}
           </Typography>
@@ -59,15 +43,11 @@ function Timeline({ data }: TimelineProps) {
           >
             <FormattedMessage id={item.title} />
           </Typography>
-          <Typography
-            variant="body2"
-            sx={{ mb: item.description ? 2 : 0 }}
-            color="text.secondary"
-          >
+          <Typography variant="body2" sx={{ mb: item.description ? 2 : 0 }}>
             <FormattedMessage id={item.subtitle} />
           </Typography>
           {item.description && (
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2">
               <FormattedMessage id={item.description} />
             </Typography>
           )}
@@ -75,6 +55,4 @@ function Timeline({ data }: TimelineProps) {
       ))}
     </>
   );
-}
-
-export default Timeline;
+};

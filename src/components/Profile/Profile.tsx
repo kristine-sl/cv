@@ -1,29 +1,12 @@
 import { Divider, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import image from '../../images/profile_image.webp';
-import About from './About';
-import Info from './Info';
-import References from './References';
+import { About } from './About';
+import { Info } from './Info';
+import { ProfilePicture } from './ProfilePicture';
+import { References } from './References';
 
-function ProfilePicture() {
-  return (
-    <Box
-      sx={{
-        borderRadius: '50%',
-        border: '1px solid #999',
-        backgroundImage: 'url(' + image + ')',
-        backgroundSize: 'contain',
-        width: '120px',
-        height: '120px',
-        marginBottom: 2,
-      }}
-    />
-  );
-}
-
-function Profile() {
+export const Profile = () => {
   return (
     <Box sx={{ color: 'text.primary' }}>
       <Box
@@ -49,6 +32,4 @@ function Profile() {
       <References />
     </Box>
   );
-}
-
-export default Profile;
+};
