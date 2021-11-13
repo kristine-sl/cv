@@ -67,7 +67,7 @@ function Timeline({ data }: TimelineProps) {
             <FormattedMessage id={item.subtitle} />
           </Typography>
           {item.description && (
-            <Typography variant="body2">
+            <Typography variant="body2" color="text.secondary">
               <FormattedMessage id={item.description} />
             </Typography>
           )}

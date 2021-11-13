@@ -11,9 +11,7 @@ export const useChildrenHeights = (ref: RefObject<HTMLElement>): number[] => {
 
   useEffect(() => {
     ref.current && [...ref.current.children].forEach(child => observer.current.observe(child));
-
-    return () => observer.current.disconnect();
-  }, []);
+  }, [ref]);
 
   return heights;
 };

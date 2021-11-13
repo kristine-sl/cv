@@ -2,13 +2,13 @@ import { Divider, Grid, Link, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-
 interface Article {
   type: string;
   title: string;
   link?: string;
-  date: string;
-  publication?: string;
+  startDate: string;
+  endDate?: string;
+  source?: string;
   description: string;
 }
 
@@ -42,6 +42,7 @@ function Articles({ data }: ArticlesProps) {
                 href={article.link}
                 variant="h3"
                 sx={{ my: 1, display: 'block' }}
+                color="text.primary"
               >
                 <FormattedMessage id={article.title} />
               </Link>
@@ -55,17 +56,33 @@ function Articles({ data }: ArticlesProps) {
               sx={{ mb: 2, display: 'flex', alignItems: 'center' }}
               color="text.secondary"
             >
-              {capitalizeFirstLetter(
-                new Date(article.date).toLocaleDateString(locale, dateOptions)
-              )}
-              {article.publication && (
+              <Box sx={{ whiteSpace: 'nowrap', display: 'flex' }}>
+                {capitalizeFirstLetter(
+                  new Date(article.startDate).toLocaleDateString(
+                    locale,
+                    dateOptions
+                  )
+                )}
+                {article.endDate && (
+                  <>
+                    <Box sx={{ mx: 0.5 }}>-</Box>
+                    {capitalizeFirstLetter(
+                      new Date(article.endDate).toLocaleDateString(
+                        locale,
+                        dateOptions
+                      )
+                    )}
+                  </>
+                )}
+              </Box>
+              {article.source && (
                 <>
                   <Box sx={{ mx: 1 }}>•</Box>
-                  <FormattedMessage id={article.publication} />
+                  <FormattedMessage id={article.source} />
                 </>
               )}
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="body2" color="text.secondary">
               <FormattedMessage id={article.description} />
             </Typography>
           </Grid>

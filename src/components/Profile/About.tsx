@@ -6,9 +6,9 @@ import { FormattedMessage } from 'react-intl';
 function About() {
   return (
     <Box sx={{ pt: 4, px: 2, pb: 2 }}>
-      <Typography variant="h2" sx={{ mb: 2 }}>
+      {/* <Typography variant="h2" sx={{ mb: 2 }}>
         <FormattedMessage id="profile.about" />
-      </Typography>
+      </Typography> */}
       <Typography variant="body1">
         <FormattedMessage id="profile.about.description" />
       </Typography>

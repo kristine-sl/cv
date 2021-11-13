@@ -7,9 +7,9 @@ import { FormattedMessage } from 'react-intl';
 function Info() {
   return (
     <Box sx={{ pt: 4, px: 2, pb: 2 }}>
-      <Typography variant="h2" sx={{ mb: 2 }}>
+      {/* <Typography variant="h2" sx={{ mb: 2 }}>
         <FormattedMessage id="profile.info" />
-      </Typography>
+      </Typography> */}
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
         <Icon component={Place} sx={{ mr: 2, color: 'text.disabled' }}></Icon>
         <Typography variant="body1">

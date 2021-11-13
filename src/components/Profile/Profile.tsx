@@ -25,7 +25,7 @@ function ProfilePicture() {
 
 function Profile() {
   return (
-    <Box>
+    <Box sx={{ color: 'text.primary' }}>
       <Box
         sx={{
           display: 'flex',
