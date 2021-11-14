@@ -1,5 +1,5 @@
 import { Box } from '@mui/system';
-import image from '../../images/profile_image.webp';
+import image from '../../assets/img/profile_image.webp';
 
 export const ProfilePicture = () => {
   return (

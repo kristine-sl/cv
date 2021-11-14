@@ -7,14 +7,14 @@ export const Links = () => {
       <IconButton
         href="https://www.linkedin.com/in/kristinesundtlorentzen/"
         color="secondary"
-        aria-label="LinkedIn.com"
+        aria-label="LinkedIn"
       >
         <Icon component={Linkedin} />
       </IconButton>
       <IconButton
-        href="https://www.linkedin.com/in/kristinesundtlorentzen/"
+        href="https://github.com/kristine-sl/cv"
         color="secondary"
-        aria-label="Github.com"
+        aria-label="Github repo"
       >
         <Icon component={Github} />
       </IconButton>
