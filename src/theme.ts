@@ -8,7 +8,7 @@ const typography: TypographyOptions = {
   fontSize: 12,
   h1: {
     fontSize: '2rem',
-    fontWeight: 400,
+    fontWeight: 500,
     letterSpacing: '0.03em',
   },
   h2: {
