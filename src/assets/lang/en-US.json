@@ -64,10 +64,12 @@
 
   "research.master.type": "Master's Thesis",
   "research.master.title": "Visual Analytics on a mobile surface: Aiding emergencies in multi-story buildings",
+  "research.master.source": "Westerdals",
   "research.master.description": "This paper discusses the challenges of visualising data about fire emergencies. Because of the stress experienced during such situations, it is important to consider human behaviour during emergencies, and the most efficient ways of displaying data. In addition, due to the fact that people generally only have access to their mobile phones during evacuations, this paper focuses on developing an emergency aid application for a mobile screen. The paper also shows how indoor location data can be utilised efficiently to aid during emergency evacuations, and how list distortion can be used to display info about the floors in a building.",
 
   "research.bachelor.type": "Main Project, Bachelor",
   "research.bachelor.title": "Simulation tool for passenger flow through Avinor’s airports",
+  "research.bachelor.source": "Westerdals",
   "research.bachelor.description": "This report describes the process of developing a user friendly simulation tool for simulating trafic from a delivery service to a security control at Oslo Airport and other similar areas.",
 
   "other.mentor.type": "Reverse mentorship",
