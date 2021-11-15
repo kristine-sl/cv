@@ -8,14 +8,12 @@ export const ThemeToggle = () => {
   const theme = useSelector(selectTheme);
 
   return (
-    <>
-      <IconButton
-        color="secondary"
-        aria-label="Github.com"
-        onClick={() => dispatch(toggle())}
-      >
-        <Icon component={theme === 'light' ? DarkMode : LightMode} />
-      </IconButton>
-    </>
+    <IconButton
+      color="secondary"
+      aria-label="Github.com"
+      onClick={() => dispatch(toggle())}
+    >
+      <Icon component={theme === 'light' ? DarkMode : LightMode} />
+    </IconButton>
   );
 };
