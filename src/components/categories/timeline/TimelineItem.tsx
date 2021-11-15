@@ -1,6 +1,5 @@
 import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { TimelineItemData } from './timelineItemData';
 import { TimelineMarker } from './TimelineMarker';
@@ -11,8 +10,6 @@ interface TimelineItemProps {
 }
 
 export const TimelineItem = ({ item, index }: TimelineItemProps) => {
-  const [expanded, setExpanded] = useState(false);
-
   return (
     <Box
       sx={{
