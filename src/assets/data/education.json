@@ -4,14 +4,16 @@
     "endYear": 2017,
     "title": "education.master.title",
     "subtitle": "education.master.subtitle",
-    "description": "education.master.description"
+    "description": "education.master.description",
+    "keywords": "education.master.keywords"
   },
   {
     "startYear": 2012,
     "endYear": 2015,
     "title": "education.bachelor.title",
     "subtitle": "education.bachelor.subtitle",
-    "description": "education.bachelor.description"
+    "description": "education.bachelor.description",
+    "keywords": "education.bachelor.keywords"
   },
   {
     "startYear": 2009,

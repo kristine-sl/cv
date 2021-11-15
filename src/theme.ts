@@ -40,6 +40,7 @@ const typography: TypographyOptions = {
     fontSize: '0.9rem',
     textTransform: 'uppercase',
     letterSpacing: '0.05em',
+    lineHeight: '1.5',
   },
   button: {
     fontSize: '0.9rem',
@@ -47,10 +48,13 @@ const typography: TypographyOptions = {
   },
   overline: {
     letterSpacing: '0.03em',
+    fontWeight: 500,
+    fontSize: '0.8rem',
   },
   body1: {
     fontSize: '1rem',
     letterSpacing: '0.03em',
+    lineHeight: '1.8',
   },
   body2: {
     fontSize: '0.9rem',

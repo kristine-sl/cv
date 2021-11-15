@@ -15,6 +15,7 @@ import research from '../../assets/data/research.json';
 import { useChildrenHeights } from '../../hooks/useChildrenHeights';
 import { Articles } from './Articles';
 import { Category } from './Category';
+import { LookingFor } from './LookingFor';
 import { Timeline } from './timeline/Timeline';
 
 export const Categories = () => {
@@ -25,8 +26,8 @@ export const Categories = () => {
   const getMaxHeight = useCallback(
     () =>
       Math.max(
-        heights.slice(0, 3).reduce((a, b) => a + b, 0),
-        heights.slice(3).reduce((a, b) => a + b, 0)
+        heights.slice(0, 2).reduce((a, b) => a + b, 0),
+        heights.slice(2).reduce((a, b) => a + b, 0)
       ),
     [heights]
   );
@@ -48,7 +49,7 @@ export const Categories = () => {
         </Category>
       </Grid>
 
-      <Grid item xs order={{ xs: 2, xl: 4 }}>
+      <Grid item xs order={{ xs: 2, xl: 3 }}>
         <Category header="categories.education" icon={School}>
           <Timeline data={education} />
         </Category>
@@ -60,14 +61,16 @@ export const Categories = () => {
         </Category>
       </Grid>
 
-      <Grid item xs order={{ xs: 4, xl: 5 }}>
+      <Grid item xs order={{ xs: 4, xl: 4 }}>
         <Category header="categories.other" icon={Article}>
           <Articles data={other} />
         </Category>
       </Grid>
 
-      <Grid item xs order={{ xs: 5, xl: 3 }}>
-        <Category header="categories.lookingFor" icon={Help}></Category>
+      <Grid item xs order={{ xs: 5, xl: 5 }}>
+        <Category header="categories.lookingFor" icon={Help}>
+          <LookingFor />
+        </Category>
       </Grid>
     </Grid>
   );
