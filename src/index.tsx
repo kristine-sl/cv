@@ -1,14 +1,21 @@
 import { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
+import { hydrate, render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { App } from './App';
 import { store } from './store';
 
-ReactDOM.render(
+const rootElement = document.getElementById('root');
+
+const Node = () => (
   <StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
-  </StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );
+
+if (rootElement!.hasChildNodes()) {
+  hydrate(<Node />, rootElement);
+} else {
+  render(<Node />, rootElement);
+}
