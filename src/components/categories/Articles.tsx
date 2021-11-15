@@ -1,23 +1,14 @@
 import { Divider, Grid, Link, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { FormattedMessage } from 'react-intl';
+import { ArticleData } from './articleData';
 
 const capitalizeFirstLetter = (word: string) => {
   return word.charAt(0).toUpperCase() + word.slice(1);
 };
 
-interface Article {
-  type: string;
-  title: string;
-  link?: string;
-  startDate: string;
-  endDate?: string;
-  source?: string;
-  description: string;
-}
-
 interface ArticlesProps {
-  data: Article[];
+  data: ArticleData[];
 }
 
 export const Articles = ({ data }: ArticlesProps) => {
