@@ -64,12 +64,12 @@
 
   "research.master.type": "Masteravhandling",
   "research.master.title": "Visual Analytics on a mobile surface: Aiding emergencies in multi-story buildings",
-  "research.master.source": "Westerdals",
+  "research.master.source": "Westerdals Oslo ACT",
   "research.master.description": "Denne artikkelen diskuterer utfordringene rundt visualisering av data om nødssituasjoner som inkluderer brann. På grunn av stresset som forårsakes av en slik situasjon er det viktig å vurdere menneskelig oppførsel under nødssituasjoner, og den mest effektive måten å presentere data. I tillegg, gitt det faktum at folk generelt kun har tilgang til deres mobiltelefoner under nødssituasjoner, fokuserer denne artikkelen på å utvikle en applikasjon for nødssituasjoner for mobile skjermer. Artikkelen viser også hvordan innendørs lokasjonsdata kan utnyttes effektivt for å hjelpe til under en nødsevakuering, og hvordan listeforvregning kan brukes for å vise informasjon om forskjellige etasjer i et bygg.",
 
   "research.bachelor.type": "Hovedprosjekt, Bachelor",
   "research.bachelor.title": "Simuleringsverktøy for passasjerflyt gjennom Avinors lufthavner",
-  "research.bachelor.source": "Westerdals",
+  "research.bachelor.source": "Westerdals Oslo ACT",
   "research.bachelor.description": "I denne rapporten beskrives prosessen rundt å utvikle et brukervennlig simuleringsverkøy for simulering av trafikk fra tilbringertjeneste til sikkerhetskontroll på Oslo Lufthavn og andre liknende områder.",
 
   "other.mentor.type": "Omvendt mentorskap",
