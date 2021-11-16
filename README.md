@@ -1,8 +1,8 @@
 # Kristine S. Lorentzen
-![Lighthouse Accessibility Badge](./.github/images/scores/lighthouse_accessibility.svg)
-![Lighthouse Best Practices Badge](./.github/images/scores/lighthouse_best-practices.svg)
-![Lighthouse Performance Badge](./.github/images/scores/lighthouse_performance.svg)
-![Lighthouse SEO Badge](./.github/images/scores/lighthouse_seo.svg)
+![Lighthouse Accessibility Badge](./.github/images/lighthouse_accessibility.svg)
+![Lighthouse Best Practices Badge](./.github/images/lighthouse_best-practices.svg)
+![Lighthouse Performance Badge](./.github/images/lighthouse_performance.svg)
+![Lighthouse SEO Badge](./.github/images/lighthouse_seo.svg)
 
 This is the repo for my CV, in the form of a web app. To view the site, visit [kristinesl.me](kristinesl.me). 
 
