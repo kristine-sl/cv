@@ -10,7 +10,7 @@ import {
 import { MouseEvent, useState } from 'react';
 import { FlagIcon } from 'react-flag-kit';
 import { useDispatch, useSelector } from 'react-redux';
-import { LocaleState, selectLocale, update } from '../../store/localeSlice';
+import { LocaleState, selectLocale, update } from '../../slices/localeSlice';
 
 export const Localization = () => {
   const dispatch = useDispatch();

@@ -8,7 +8,7 @@ interface TimelineProps {
 export const Timeline = ({ data }: TimelineProps) => (
   <>
     {data.map((item, index) => (
-      <TimelineItem item={item} index={index} />
+      <TimelineItem key={index} index={index} item={item} />
     ))}
   </>
 );

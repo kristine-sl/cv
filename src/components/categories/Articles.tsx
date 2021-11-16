@@ -1,5 +1,6 @@
 import { Divider, Grid, Link, Typography } from '@mui/material';
 import { Box } from '@mui/system';
+import { Fragment } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { ArticleData } from './articleData';
 
@@ -22,7 +23,7 @@ export const Articles = ({ data }: ArticlesProps) => {
   return (
     <Grid container direction="column" spacing={2}>
       {data.map((article, index) => (
-        <>
+        <Fragment key={index}>
           {index !== 0 && <Divider variant="middle" sx={{ mt: 2 }} />}
           <Grid item>
             <Typography variant="subtitle2" component="span">
@@ -45,6 +46,7 @@ export const Articles = ({ data }: ArticlesProps) => {
             )}
 
             <Typography
+              component="div"
               variant="body2"
               sx={{ mb: 2, display: 'flex', alignItems: 'center' }}
             >
@@ -79,7 +81,7 @@ export const Articles = ({ data }: ArticlesProps) => {
               <FormattedMessage id={article.description} />
             </Typography>
           </Grid>
-        </>
+        </Fragment>
       ))}
     </Grid>
   );

@@ -13,6 +13,7 @@ interface CategoryProps {
 export const Category = (props: CategoryProps) => (
   <Card>
     <Typography
+      component="div"
       variant="h2"
       sx={{
         px: 2,

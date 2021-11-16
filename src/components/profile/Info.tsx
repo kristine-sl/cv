@@ -26,10 +26,7 @@ export const Info = () => (
       </Typography>
     </Box>
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-      <Icon
-        component={PhoneIphone}
-        sx={{ mr: 2, color: 'text.disabled' }}
-      ></Icon>
+      <Icon component={PhoneIphone} sx={{ mr: 2, color: 'text.disabled' }} />
       <Typography variant="body1">+47 932 16 768</Typography>
     </Box>
   </Box>

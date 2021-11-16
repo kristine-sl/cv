@@ -1,7 +1,7 @@
 import { DarkMode, LightMode } from '@emotion-icons/material-outlined';
 import { Icon, IconButton } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectTheme, toggle } from '../../store/themeSlice';
+import { selectTheme, toggle } from '../../slices/themeSlice';
 
 export const ThemeToggle = () => {
   const dispatch = useDispatch();

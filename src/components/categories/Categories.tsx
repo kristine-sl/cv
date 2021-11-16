@@ -8,10 +8,10 @@ import {
 import { Grid } from '@mui/material';
 import { useTheme } from '@mui/system';
 import { useCallback, useRef } from 'react';
-import education from '../../assets/data/education.json';
-import experience from '../../assets/data/experience.json';
-import other from '../../assets/data/other.json';
-import research from '../../assets/data/research.json';
+import education from '../../../assets/data/education.json';
+import experience from '../../../assets/data/experience.json';
+import other from '../../../assets/data/other.json';
+import research from '../../../assets/data/research.json';
 import { useChildrenHeights } from '../../hooks/useChildrenHeights';
 import { Articles } from './Articles';
 import { Category } from './Category';

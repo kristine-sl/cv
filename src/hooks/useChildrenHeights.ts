@@ -1,6 +1,10 @@
 import { RefObject, useEffect, useRef, useState } from 'react';
 
 export const useChildrenHeights = (ref: RefObject<HTMLElement>): number[] => {
+  if (typeof window === 'undefined') {
+    return []
+  }
+  
   const [heights, setHeights] = useState<number[]>([]);
 
   const observer = useRef(

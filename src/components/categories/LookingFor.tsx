@@ -1,15 +1,15 @@
 import { Typography } from '@mui/material';
 import { FormattedMessage } from 'react-intl';
-import data from '../../assets/data/lookingFor.json';
+import data from '../../../assets/data/lookingFor.json';
 
 export const LookingFor = () => (
-  <Typography variant="body2">
-    {data.points.map((item) => (
-      <ul>
-        <li>
+  <ul>
+    {data.points.map((item, index) => (
+      <li key={index}>
+        <Typography variant="body2">
           <FormattedMessage id={item} />
-        </li>
-      </ul>
+        </Typography>
+      </li>
     ))}
-  </Typography>
+  </ul>
 );

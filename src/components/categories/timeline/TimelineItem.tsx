@@ -43,7 +43,11 @@ export const TimelineItem = ({ item, index }: TimelineItemProps) => (
       </Typography>
     )}
     {item.keywords && (
-      <Typography variant="body2" sx={{ mt: 2, fontStyle: 'italic' }}>
+      <Typography
+        component="div"
+        variant="body2"
+        sx={{ mt: 2, fontStyle: 'italic' }}
+      >
         <Box sx={{ fontWeight: '500', mr: 0.5 }} component="span">
           <FormattedMessage id="keywords" />
           <span>:</span>
