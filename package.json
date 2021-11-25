@@ -1,6 +1,7 @@
 {
-  "name": "cv-2",
+  "name": "cv",
   "license": "MIT",
+  "version": "0.0.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
