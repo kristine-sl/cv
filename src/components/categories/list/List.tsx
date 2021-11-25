@@ -26,10 +26,9 @@ export const List = ({ data }: ListProps) => {
     >
       {header && <CategoryHeader {...header} />}
       {data.map((item, index) => (
-        <Box sx={{ pl: 3.5 }}>
+        <Box sx={{ pl: 3.5 }} key={index}>
           <Box
             component="li"
-            key={index}
             sx={{
               '&::marker': {
                 color: 'secondary.main',

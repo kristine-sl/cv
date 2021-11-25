@@ -20,9 +20,10 @@ export const Timeline = ({ data }: TimelineProps) => {
               breakInside: 'avoid',
             },
           }}
+          key={index}
         >
           {header && index === 0 && <CategoryHeader {...header} />}
-          <TimelineItem key={index} index={index} item={item} />
+          <TimelineItem index={index} item={item} />
         </Box>
       ))}
     </>
