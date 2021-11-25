@@ -1,9 +1,12 @@
 import { Box } from '@mui/system';
 import Image from 'next/image';
 import { useIntl } from 'react-intl';
-import image from '../../../public/images/profile_image.webp';
 
-export const ProfilePicture = () => {
+interface ProfilePictureProps {
+  image: StaticImageData;
+}
+
+export const ProfilePicture = ({ image }: ProfilePictureProps) => {
   const intl = useIntl();
 
   return (

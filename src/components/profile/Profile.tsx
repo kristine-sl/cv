@@ -1,12 +1,18 @@
 import { Divider, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { FormattedMessage } from 'react-intl';
-import { About } from './About';
-import { Info } from './Info';
+import { About } from './about/About';
+import { Info } from './info/Info';
+import { ProfileData } from './profileData';
 import { ProfilePicture } from './ProfilePicture';
-import { References } from './References';
+import { References } from './references/References';
 
-export const Profile = () => (
+interface ProfileProps {
+  image: StaticImageData;
+  data: ProfileData;
+}
+
+export const Profile = ({ image, data }: ProfileProps) => (
   <Box sx={{ color: 'text.primary' }}>
     <Box
       sx={{
@@ -17,16 +23,16 @@ export const Profile = () => (
         py: 4,
       }}
     >
-      <ProfilePicture />
-      <Typography variant="h1">Kristine S. Lorentzen</Typography>
+      <ProfilePicture image={image} />
+      <Typography variant="h1">{data.name}</Typography>
       <Typography variant="subtitle1" component="span">
-        <FormattedMessage id="profile.jobTitle" />
+        <FormattedMessage id={data.jobTitle} />
       </Typography>
     </Box>
     <Divider variant="middle" />
-    <About />
+    <About data={data.about} />
     <Divider variant="middle" />
-    <Info />
+    <Info data={data.info} />
     <Divider variant="middle" />
     <References />
   </Box>

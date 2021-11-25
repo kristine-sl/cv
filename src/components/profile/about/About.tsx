@@ -2,10 +2,14 @@ import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { FormattedMessage } from 'react-intl';
 
-export const About = () => (
+interface AboutProps {
+  data: string;
+}
+
+export const About = ({ data }: AboutProps) => (
   <Box sx={{ px: 2, py: 3 }}>
     <Typography variant="body1">
-      <FormattedMessage id="profile.about.description" />
+      <FormattedMessage id={data} />
     </Typography>
   </Box>
 );

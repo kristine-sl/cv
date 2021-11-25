@@ -1,15 +1,15 @@
 import { ReactNode, useEffect } from 'react';
 import { IntlProvider } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import enUs from '../../assets/lang/en-US.json';
-import nbNo from '../../assets/lang/nb-NO.json';
 import { selectLocale, update } from '../slices';
 
 interface LocaleProps {
+  nbNo: Record<string, string>;
+  enUs: Record<string, string>;
   children: ReactNode;
 }
 
-export const Locale = ({ children }: LocaleProps) => {
+export const Locale = ({ children, nbNo, enUs }: LocaleProps) => {
   const locale = useSelector(selectLocale);
   const dispatch = useDispatch();
 

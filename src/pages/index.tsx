@@ -1,44 +1,70 @@
-import { Grid } from '@mui/material';
-import { Box } from '@mui/system';
+import { Biotech } from '@emotion-icons/material';
+import {
+  Article,
+  Help,
+  School,
+  WorkOutline,
+} from '@emotion-icons/material-outlined';
 import type { NextPage } from 'next';
-import { Categories } from '../components/categories/Categories';
-import { Profile } from '../components/profile/Profile';
+import education from '../../assets/data/education.json';
+import experience from '../../assets/data/experience.json';
+import lookingFor from '../../assets/data/lookingFor.json';
+import other from '../../assets/data/other.json';
+import profile from '../../assets/data/profile.json';
+import research from '../../assets/data/research.json';
+import image from '../../public/images/profile_image.webp';
+import { CategoryData } from '../components/categories/Category';
+import { Header } from '../components/header/Header';
+import { Content } from '../components/Content';
 
 const Home: NextPage = () => {
+  const categories: CategoryData[] = [
+    {
+      header: 'categories.experience',
+      icon: WorkOutline,
+      type: 'timeline',
+      data: experience,
+      order: { xs: 1, xl: 1 },
+    },
+    {
+      header: 'categories.education',
+      icon: School,
+      type: 'timeline',
+      data: education,
+      order: { xs: 2, xl: 3 },
+    },
+    {
+      header: 'categories.research',
+      icon: Biotech,
+      type: 'articles',
+      data: research,
+      order: { xs: 3, xl: 2 },
+    },
+    {
+      header: 'categories.other',
+      icon: Article,
+      type: 'articles',
+      data: other,
+      order: { xs: 4, xl: 4 },
+    },
+    {
+      header: 'categories.lookingFor',
+      icon: Help,
+      type: 'list',
+      data: lookingFor,
+      order: { xs: 5, xl: 5 },
+    },
+  ];
+
   return (
-    <Grid
-      container
-      spacing={2}
-      sx={{
-        '@media print': {
-          display: 'block',
-          '.MuiGrid-root': { display: 'block' },
-          '.MuiGrid-item': {
-            maxWidth: '100%',
-            flexBasis: 'auto',
-            pr: 0,
-          },
-        },
-      }}
-    >
-      <Grid item xs={12} md={5} lg={4} xl={3}>
-        <Box sx={{ py: 2, pl: 2, pr: { xs: 2, md: 0 } }}>
-          <Profile />
-        </Box>
-      </Grid>
-      <Grid
-        item
-        xs
-        sx={{
-          height: { md: 'calc(100vh - 48px)' },
-          overflow: { md: 'scroll' },
-        }}
-      >
-        <Box sx={{ py: 2, pr: 2, pl: { xs: 2, md: 0 } }}>
-          <Categories />
-        </Box>
-      </Grid>
-    </Grid>
+    <>
+      <Header
+        linkedIn="https://www.linkedin.com/in/kristinesundtlorentzen/"
+        github="https://github.com/kristine-sl/cv"
+        email="kristine.sundt.lorentzen@gmail.com"
+      />
+      <Content image={image} profile={profile} categories={categories} />
+    </>
   );
 };
 

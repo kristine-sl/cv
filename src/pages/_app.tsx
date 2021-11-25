@@ -1,24 +1,19 @@
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
 import { Provider as ReduxProvider } from 'react-redux';
-import { Header } from '../components/header/Header';
+import enUs from '../../assets/lang/en-US.json';
+import nbNo from '../../assets/lang/nb-NO.json';
 import { Locale } from '../components/Locale';
 import { Theme } from '../components/Theme';
 import { store } from '../store';
+import { darkTheme, lightTheme } from '../theme';
+import { Meta } from './_meta';
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ReduxProvider store={store}>
-      <Theme>
-        <Locale>
-          <Head>
-            <title>Kristine S. Lorentzen</title>
-            <meta
-              name="description"
-              content="CV site for Kristine Sundt Lorentzen"
-            />
-          </Head>
-          <Header />
+      <Theme lightTheme={lightTheme} darkTheme={darkTheme}>
+        <Locale nbNo={nbNo} enUs={enUs}>
+          <Meta />
           <Component {...pageProps} />
         </Locale>
       </Theme>
