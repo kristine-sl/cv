@@ -1,40 +1,18 @@
-import { EmotionIcon } from '@emotion-icons/emotion-icon';
-import { Card, CardContent, Icon, Typography } from '@mui/material';
-import { Box } from '@mui/system';
+import { Card, CardContent } from '@mui/material';
 import { ReactNode } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { CategoryContext } from './CategoryContext';
+import { CategoryHeaderProps } from './CategoryHeader';
 
-interface CategoryProps {
-  header: string;
-  icon: EmotionIcon;
+export type CategoryProps = {
   children?: ReactNode;
-}
+} & CategoryHeaderProps;
 
-export const Category = (props: CategoryProps) => (
-  <Card>
-    <Typography
-      variant="h2"
-      sx={{
-        px: 2,
-        py: 1.5,
-        bgcolor: 'primary.main',
-        color: 'primary.contrastText',
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
-      <Box
-        sx={{
-          mr: 2,
-          display: 'flex',
-          alignItems: 'center',
-          opacity: '0.7',
-        }}
-      >
-        <Icon component={props.icon} />
-      </Box>
-      <FormattedMessage id={props.header} />
-    </Typography>
-    <CardContent>{props.children}</CardContent>
-  </Card>
-);
+export const Category = ({ children, header, icon }: CategoryProps) => {
+  return (
+    <CategoryContext.Provider value={{ header, icon }}>
+      <Card sx={{ '@media print': { m: 0, boxShadow: 0 } }}>
+        <CardContent>{children}</CardContent>
+      </Card>
+    </CategoryContext.Provider>
+  );
+};

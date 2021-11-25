@@ -6,7 +6,21 @@ import { Profile } from '../components/profile/Profile';
 
 const Home: NextPage = () => {
   return (
-    <Grid container spacing={2}>
+    <Grid
+      container
+      spacing={2}
+      sx={{
+        '@media print': {
+          display: 'block',
+          '.MuiGrid-root': { display: 'block' },
+          '.MuiGrid-item': {
+            maxWidth: '100%',
+            flexBasis: 'auto',
+            pr: 0,
+          },
+        },
+      }}
+    >
       <Grid item xs={12} md={5} lg={4} xl={3}>
         <Box sx={{ py: 2, pl: 2, pr: { xs: 2, md: 0 } }}>
           <Profile />

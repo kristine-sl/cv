@@ -10,13 +10,14 @@ import { useTheme } from '@mui/system';
 import { useCallback, useRef } from 'react';
 import education from '../../../assets/data/education.json';
 import experience from '../../../assets/data/experience.json';
+import lookingFor from '../../../assets/data/lookingFor.json';
 import other from '../../../assets/data/other.json';
 import research from '../../../assets/data/research.json';
 import { useChildrenHeights } from '../../hooks/useChildrenHeights';
-import { Articles } from './Articles';
+import Articles from './articles';
 import { Category } from './Category';
-import { LookingFor } from './LookingFor';
-import { Timeline } from './timeline/Timeline';
+import List from './list';
+import Timeline from './timeline';
 
 export const Categories = () => {
   const theme = useTheme();
@@ -69,7 +70,7 @@ export const Categories = () => {
 
       <Grid item xs order={{ xs: 5, xl: 5 }}>
         <Category header="categories.lookingFor" icon={Help}>
-          <LookingFor />
+          <List data={lookingFor} />
         </Category>
       </Grid>
     </Grid>
