@@ -2,11 +2,11 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Provider as ReduxProvider } from 'react-redux';
 import { Header } from '../components/header/Header';
-import Locale from '../components/Locale';
-import Theme from '../components/Theme';
+import { Locale } from '../components/Locale';
+import { Theme } from '../components/Theme';
 import { store } from '../store';
 
-function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ReduxProvider store={store}>
       <Theme>
@@ -24,6 +24,6 @@ function App({ Component, pageProps }: AppProps) {
       </Theme>
     </ReduxProvider>
   );
-}
+};
 
 export default App;

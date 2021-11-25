@@ -9,7 +9,7 @@ interface ThemeProps {
   children: ReactNode;
 }
 
-function Theme({ children }: ThemeProps) {
+export const Theme = ({ children }: ThemeProps) => {
   const theme = useSelector(selectTheme);
 
   return (
@@ -18,6 +18,4 @@ function Theme({ children }: ThemeProps) {
       {children}
     </ThemeProvider>
   );
-}
-
-export default Theme;
+};

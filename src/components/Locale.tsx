@@ -9,7 +9,7 @@ interface LocaleProps {
   children: ReactNode;
 }
 
-function Locale({ children }: LocaleProps) {
+export const Locale = ({ children }: LocaleProps) => {
   const locale = useSelector(selectLocale);
   const dispatch = useDispatch();
 
@@ -24,6 +24,4 @@ function Locale({ children }: LocaleProps) {
       {children}
     </IntlProvider>
   );
-}
-
-export default Locale;
+};
