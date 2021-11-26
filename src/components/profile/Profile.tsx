@@ -1,16 +1,16 @@
 import { Divider, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { FormattedMessage } from 'react-intl';
+import { ProfilePictureProps } from '.';
 import { About } from './about/About';
 import { Info } from './info/Info';
 import { ProfileData } from './profileData';
 import { ProfilePicture } from './ProfilePicture';
 import { References } from './references/References';
 
-interface ProfileProps {
-  image: StaticImageData;
+export type ProfileProps = {
   data: ProfileData;
-}
+} & ProfilePictureProps;
 
 export const Profile = ({ image, data }: ProfileProps) => (
   <Box sx={{ color: 'text.primary' }}>

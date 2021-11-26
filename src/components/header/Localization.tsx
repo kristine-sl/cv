@@ -9,16 +9,15 @@ import {
 } from '@mui/material';
 import { MouseEvent, useState } from 'react';
 import { FlagIcon } from 'react-flag-kit';
-import { useDispatch, useSelector } from 'react-redux';
-import { LocaleState, selectLocale, update } from '../../slices/localeSlice';
 
-export const Localization = () => {
-  const dispatch = useDispatch();
+export interface LocalizationProps {
+  locale: string;
+  updateLocale: (locale: string) => void;
+}
 
-  const locale = useSelector(selectLocale);
-
-  const setLocale = (locale: LocaleState) => {
-    dispatch(update(locale));
+export const Localization = ({ locale, updateLocale }: LocalizationProps) => {
+  const setLocale = (locale: string) => {
+    updateLocale(locale);
     handleClose();
   };
 

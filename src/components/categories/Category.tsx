@@ -1,27 +1,7 @@
 import { Card, CardContent } from '@mui/material';
 import { ReactNode } from 'react';
-import { ArticleData } from './articles/articleData';
 import { CategoryContext } from './CategoryContext';
 import { CategoryHeaderProps } from './CategoryHeader';
-import { TimelineItemData } from './timeline/timelineItemData';
-
-export type CategoryData = {
-  order: number | Record<string, number>;
-} & CategoryHeaderProps &
-  (
-    | {
-        type: 'articles';
-        data: ArticleData[];
-      }
-    | {
-        type: 'timeline';
-        data: TimelineItemData[];
-      }
-    | {
-        type: 'list';
-        data: string[];
-      }
-  );
 
 export type CategoryProps = {
   children?: ReactNode;

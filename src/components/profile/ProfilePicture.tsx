@@ -1,13 +1,13 @@
 import { Box } from '@mui/system';
-import Image from 'next/image';
+import { ReactNode } from 'react';
 import { useIntl } from 'react-intl';
 
-interface ProfilePictureProps {
-  image: StaticImageData;
+export interface ProfilePictureProps {
+  image: string | ReactNode;
 }
 
 export const ProfilePicture = ({ image }: ProfilePictureProps) => {
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
 
   return (
     <Box
@@ -19,7 +19,11 @@ export const ProfilePicture = ({ image }: ProfilePictureProps) => {
         overflow: 'hidden',
       }}
     >
-      <Image src={image} alt={intl.formatMessage({ id: 'profile.picture' })} />
+      {typeof image === 'string' ? (
+        <img src={image} alt={formatMessage({ id: 'profile.picture' })} />
+      ) : (
+        image
+      )}
     </Box>
   );
 };

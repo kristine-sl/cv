@@ -2,10 +2,11 @@ import { Grid } from '@mui/material';
 import { useTheme } from '@mui/system';
 import { useCallback, useRef } from 'react';
 import { useChildrenHeights } from '../../hooks/useChildrenHeights';
-import Articles from './articles';
-import { Category, CategoryData } from './Category';
-import List from './list';
-import Timeline from './timeline';
+import { Articles } from './articles';
+import { Category } from './Category';
+import { CategoryData } from './categoryData';
+import { List } from './list';
+import { Timeline } from './timeline';
 
 interface CategoriesProps {
   data: CategoryData[];

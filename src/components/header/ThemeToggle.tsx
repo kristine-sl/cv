@@ -1,17 +1,17 @@
 import { DarkMode, LightMode } from '@emotion-icons/material-outlined';
 import { Icon, IconButton } from '@mui/material';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectTheme, toggle } from '../../slices/themeSlice';
 
-export const ThemeToggle = () => {
-  const dispatch = useDispatch();
-  const theme = useSelector(selectTheme);
+export interface ThemeToggleProps {
+  theme: 'light' | 'dark';
+  toggleTheme: () => void;
+}
 
+export const ThemeToggle = ({ theme, toggleTheme }: ThemeToggleProps) => {
   return (
     <IconButton
       color="secondary"
       aria-label="Github.com"
-      onClick={() => dispatch(toggle())}
+      onClick={() => toggleTheme()}
     >
       <Icon component={theme === 'light' ? DarkMode : LightMode} />
     </IconButton>
