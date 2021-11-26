@@ -40,12 +40,8 @@
   "module": "dist/cv.esm.js",
   "size-limit": [
     {
-      "path": "dist/cv.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
       "path": "dist/cv.esm.js",
-      "limit": "10 KB"
+      "limit": "150 KB"
     }
   ],
   "devDependencies": {
