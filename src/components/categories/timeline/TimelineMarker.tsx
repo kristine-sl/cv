@@ -9,6 +9,9 @@ export const TimelineMarker = () => (
       borderRadius: '50%',
       position: 'absolute',
       left: '-7px',
+      '@media print': {
+        WebkitPrintColorAdjust: 'exact',
+      },
     }}
   />
 );
