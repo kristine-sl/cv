@@ -1,3 +1,4 @@
+import { ResizeObserver } from '@juggle/resize-observer';
 import { RefObject, useEffect, useRef, useState } from 'react';
 
 export const useChildrenHeights = (ref: RefObject<HTMLElement>): number[] => {
@@ -12,7 +13,7 @@ export const useChildrenHeights = (ref: RefObject<HTMLElement>): number[] => {
       () =>
         ref.current &&
         setHeights(
-          [...ref.current.children].map(
+          Array.from(ref.current.children).map(
             (child) => child.getBoundingClientRect().height
           )
         )
@@ -21,7 +22,7 @@ export const useChildrenHeights = (ref: RefObject<HTMLElement>): number[] => {
 
   useEffect(() => {
     ref.current &&
-      [...ref.current.children].forEach((child) =>
+      Array.from(ref.current.children).forEach((child) =>
         observer.current.observe(child)
       );
   }, [ref]);

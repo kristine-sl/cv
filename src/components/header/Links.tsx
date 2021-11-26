@@ -1,21 +1,23 @@
 import { Github, Linkedin } from '@emotion-icons/fa-brands';
 import { Icon, IconButton } from '@mui/material';
 
-export const Links = () => (
+interface LinksProps {
+  github?: string;
+  linkedIn?: string;
+}
+
+export const Links = ({ github, linkedIn }: LinksProps) => (
   <>
-    <IconButton
-      href="https://www.linkedin.com/in/kristinesundtlorentzen/"
-      color="secondary"
-      aria-label="LinkedIn"
-    >
-      <Icon component={Linkedin} />
-    </IconButton>
-    <IconButton
-      href="https://github.com/kristine-sl/cv"
-      color="secondary"
-      aria-label="Github repo"
-    >
-      <Icon component={Github} />
-    </IconButton>
+    {linkedIn && (
+      <IconButton href={linkedIn} color="secondary" aria-label="LinkedIn">
+        <Icon component={Linkedin} />
+      </IconButton>
+    )}
+
+    {github && (
+      <IconButton href={github} color="secondary" aria-label="Github">
+        <Icon component={Github} />
+      </IconButton>
+    )}
   </>
 );

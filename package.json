@@ -1,12 +1,69 @@
 {
-  "name": "cv",
+  "version": "0.1.0",
   "license": "MIT",
-  "version": "0.0.1",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": ">=17"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "cv",
+  "author": "Kristine Sundt Lorentzen",
+  "module": "dist/cv.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/cv.esm.js",
+      "limit": "150 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@size-limit/preset-small-lib": "^7.0.3",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/addons": "^6.3.12",
+    "@storybook/react": "^6.3.12",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.3",
+    "husky": "^7.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "size-limit": "^7.0.3",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.2",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "@emotion-icons/fa-brands": "^3.19.0",
@@ -14,22 +71,10 @@
     "@emotion-icons/material-outlined": "^3.14.0",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
-    "@mui/material": "^5.1.0",
+    "@juggle/resize-observer": "^3.3.1",
+    "@mui/material": "^5.2.1",
     "@reduxjs/toolkit": "^1.6.2",
-    "next": "12.0.4",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
     "react-flag-kit": "^1.0.0",
-    "react-intl": "^5.21.2",
-    "react-redux": "^7.2.6"
-  },
-  "devDependencies": {
-    "@types/jest": "^27.0.2",
-    "@types/node": "16.11.7",
-    "@types/react": "^17.0.35",
-    "@types/react-dom": "^17.0.11",
-    "eslint": "7",
-    "eslint-config-next": "12.0.4",
-    "typescript": "4.4.4"
+    "react-intl": "^5.22.0"
   }
 }

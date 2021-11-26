@@ -1,3 +1,3 @@
-import { Articles } from './Articles';
-
-export default Articles;
+export * from './Article';
+export * from './articleData';
+export * from './Articles';

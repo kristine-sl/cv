@@ -1,9 +1,13 @@
 import { Button } from '@mui/material';
 import { FormattedMessage } from 'react-intl';
 
-export const Contact = () => (
+interface ContactProps {
+  email: string;
+}
+
+export const Contact = ({ email }: ContactProps) => (
   <Button
-    href="mailto:kristine.sundt.lorentzen@gmail.com"
+    href={'mailto:' + email}
     variant="contained"
     color="secondary"
     disableElevation
