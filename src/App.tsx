@@ -10,6 +10,7 @@ type AppProps = {
     dark: ThemeProviderProps['theme'];
   };
   messages: { [locale: string]: ResolvedIntlConfig['messages'] };
+  hideReference?: boolean;
 } & HeaderProps &
   MainProps;
 
@@ -21,6 +22,7 @@ export const App = ({
   profile,
   image,
   categories,
+  hideReference,
   ...headerProps
 }: AppProps) => {
   return (
@@ -28,7 +30,12 @@ export const App = ({
       <CssBaseline />
       <IntlProvider locale={locale} messages={messages[locale]}>
         <Header {...headerProps} locale={locale} theme={theme} />
-        <Main profile={profile} image={image} categories={categories} />
+        <Main
+          profile={profile}
+          image={image}
+          categories={categories}
+          hideReference={hideReference}
+        />
       </IntlProvider>
     </ThemeProvider>
   );

@@ -6,9 +6,15 @@ import { Profile, ProfileData, ProfilePictureProps } from './profile';
 export type MainProps = {
   profile: ProfileData;
   categories: CategoryData[];
+  hideReference?: boolean;
 } & Pick<ProfilePictureProps, 'image'>;
 
-export const Main = ({ image, profile, categories }: MainProps) => {
+export const Main = ({
+  image,
+  profile,
+  categories,
+  hideReference,
+}: MainProps) => {
   return (
     <Grid
       container
@@ -27,7 +33,7 @@ export const Main = ({ image, profile, categories }: MainProps) => {
     >
       <Grid item xs={12} md={5} lg={4} xl={3}>
         <Box sx={{ py: 2, pl: 2, pr: { xs: 2, md: 0 } }}>
-          <Profile image={image} data={profile} />
+          <Profile image={image} data={profile} hideReference={hideReference} />
         </Box>
       </Grid>
       <Grid

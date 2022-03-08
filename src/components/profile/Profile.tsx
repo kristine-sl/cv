@@ -10,9 +10,10 @@ import { References } from './references/References';
 
 export type ProfileProps = {
   data: ProfileData;
+  hideReference?: boolean;
 } & ProfilePictureProps;
 
-export const Profile = ({ image, data }: ProfileProps) => (
+export const Profile = ({ image, data, hideReference }: ProfileProps) => (
   <Box sx={{ color: 'text.primary' }}>
     <Box
       sx={{
@@ -33,7 +34,11 @@ export const Profile = ({ image, data }: ProfileProps) => (
     <About data={data.about} />
     <Divider variant="middle" />
     <Info data={data.info} />
-    <Divider variant="middle" />
-    <References />
+    {!hideReference && (
+      <>
+        <Divider variant="middle" />
+        <References />
+      </>
+    )}
   </Box>
 );
