@@ -8,21 +8,21 @@ interface LinksProps {
 }
 
 export const Links = ({ github, linkedIn, instagram }: LinksProps) => (
-  <Box sx={{ display: 'flex', height: '100%' }}>
+  <>
     {linkedIn && (
       <IconButton href={linkedIn} color="secondary" aria-label="LinkedIn">
-        <Icon component={Linkedin} />
+        <Icon component={Linkedin} suppressHydrationWarning />
       </IconButton>
     )}
     {github && (
       <IconButton href={github} color="secondary" aria-label="Github">
-        <Icon component={Github} />
+        <Icon component={Github} suppressHydrationWarning />
       </IconButton>
     )}
     {instagram && (
       <IconButton href={instagram} color="secondary" aria-label="Instagram">
-        <Icon component={Instagram} />
+        <Icon component={Instagram} suppressHydrationWarning />
       </IconButton>
     )}
-  </Box>
+  </>
 );
