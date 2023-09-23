@@ -32,6 +32,7 @@ export const Header = ({
       {(github || linkedIn || instagram) && (
         <>
           <Links github={github} linkedIn={linkedIn} instagram={instagram} />
+          <Box sx={{ flexGrow: 1 }} />
         </>
       )}
       {email && <Contact email={email} />}

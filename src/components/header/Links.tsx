@@ -9,11 +9,6 @@ interface LinksProps {
 
 export const Links = ({ github, linkedIn, instagram }: LinksProps) => (
   <>
-    {instagram && (
-      <IconButton href={instagram} color="secondary" aria-label="Instagram">
-        <Icon component={Instagram} />
-      </IconButton>
-    )}
     {linkedIn && (
       <IconButton href={linkedIn} color="secondary" aria-label="LinkedIn">
         <Icon component={Linkedin} />
