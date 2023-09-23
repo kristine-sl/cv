@@ -35,9 +35,7 @@ export const Header = ({
           <Box sx={{ flexGrow: 1 }} />
         </>
       )}
-
       {email && <Contact email={email} />}
-
       <Box sx={{ flexGrow: 1, display: { sm: 'none' } }} />
       <Localization {...localizationProps} />
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
