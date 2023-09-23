@@ -21,7 +21,7 @@ export const Article = ({ article, index }: ArticleProps) => {
   const locale = 'nb-NO';
 
   return (
-    <Box suppressHydrationWarning>
+    <Box>
       {index !== 0 && (
         <Divider
           variant="middle"
@@ -53,18 +53,25 @@ export const Article = ({ article, index }: ArticleProps) => {
         sx={{ mb: 2, display: 'flex', alignItems: 'center' }}
       >
         <Box sx={{ whiteSpace: 'nowrap', display: 'flex' }}>
-          {capitalizeFirstLetter(
-            new Date(article.startDate).toLocaleDateString(locale, dateOptions)
-          )}
+          <span suppressHydrationWarning>
+            {capitalizeFirstLetter(
+              new Date(article.startDate).toLocaleDateString(
+                locale,
+                dateOptions
+              )
+            )}
+          </span>
           {article.endDate && (
             <>
               <Box sx={{ mx: 0.5 }}>-</Box>
-              {capitalizeFirstLetter(
-                new Date(article.endDate).toLocaleDateString(
-                  locale,
-                  dateOptions
-                )
-              )}
+              <span suppressHydrationWarning>
+                {capitalizeFirstLetter(
+                  new Date(article.endDate).toLocaleDateString(
+                    locale,
+                    dateOptions
+                  )
+                )}
+              </span>
             </>
           )}
         </Box>
