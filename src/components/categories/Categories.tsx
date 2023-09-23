@@ -7,6 +7,7 @@ import { Category } from './Category';
 import { CategoryData } from './categoryData';
 import { List } from './list';
 import { Timeline } from './timeline';
+import { Gallery } from './gallery';
 
 interface CategoriesProps {
   data: CategoryData[];
@@ -42,6 +43,7 @@ export const Categories = ({ data }: CategoriesProps) => {
             {category.type === 'timeline' && <Timeline data={category.data} />}
             {category.type === 'articles' && <Articles data={category.data} />}
             {category.type === 'list' && <List data={category.data} />}
+            {category.type === 'gallery' && <Gallery data={category.data} />}
           </Category>
         </Grid>
       ))}
