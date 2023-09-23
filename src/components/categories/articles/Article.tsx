@@ -21,7 +21,7 @@ export const Article = ({ article, index }: ArticleProps) => {
   const locale = 'nb-NO';
 
   return (
-    <Box>
+    <Box suppressHydrationWarning>
       {index !== 0 && (
         <Divider
           variant="middle"
