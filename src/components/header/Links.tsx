@@ -1,5 +1,6 @@
 import { Github, Instagram, Linkedin } from '@emotion-icons/fa-brands';
 import { Icon, IconButton } from '@mui/material';
+import { log } from 'console';
 
 interface LinksProps {
   github?: string;
@@ -7,8 +8,10 @@ interface LinksProps {
   instagram?: string;
 }
 
-export const Links = ({ github, linkedIn, instagram }: LinksProps) => (
-  <>
+export const Links = ({ github, linkedIn, instagram }: LinksProps) => {
+  console.log('LinksProps', { github, linkedIn, instagram });
+  
+  return <>
     {linkedIn && (
       <IconButton href={linkedIn} color="secondary" aria-label="LinkedIn">
         <Icon component={Linkedin} />
@@ -27,4 +30,5 @@ export const Links = ({ github, linkedIn, instagram }: LinksProps) => (
       </IconButton>
     )}
   </>
+}
 );
