@@ -1,15 +1,16 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 
-const toPath = (location) => path.join(process.cwd(), location);
+const toPath = location => path.join(process.cwd(), location);
 
 module.exports = {
   stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   typescript: {
-    check: true,
+    check: false,
+    reactDocgen: 'none',
   },
-  webpackFinal: async (config) => {
+  webpackFinal: async config => {
     return merge(config, {
       resolve: {
         alias: {
