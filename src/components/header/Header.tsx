@@ -27,8 +27,9 @@ export const Header = ({
     position="sticky"
     elevation={1}
     sx={{ bgcolor: 'background.paper', displayPrint: 'none' }}
+    suppressHydrationWarning
   >
-    <Toolbar sx={{ gap: 1 }}>
+    <Toolbar sx={{ gap: 1 }} suppressHydrationWarning>
       {(github || linkedIn || instagram) && (
         <>
           <Links github={github} linkedIn={linkedIn} instagram={instagram} />
