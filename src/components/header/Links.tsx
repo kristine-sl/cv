@@ -1,5 +1,5 @@
 import { Github, Instagram, Linkedin } from '@emotion-icons/fa-brands';
-import { Icon, IconButton } from '@mui/material';
+import { Box, Icon, IconButton } from '@mui/material';
 
 interface LinksProps {
   github?: string;
@@ -8,7 +8,7 @@ interface LinksProps {
 }
 
 export const Links = ({ github, linkedIn, instagram }: LinksProps) => (
-  <>
+  <Box style={{ display: 'flex', height: '100%' }}>
     {linkedIn && (
       <IconButton href={linkedIn} color="secondary" aria-label="LinkedIn">
         <Icon component={Linkedin} />
@@ -24,5 +24,5 @@ export const Links = ({ github, linkedIn, instagram }: LinksProps) => (
         <Icon component={Instagram} />
       </IconButton>
     )}
-  </>
+  </Box>
 );
