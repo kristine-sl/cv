@@ -1,5 +1,5 @@
 import { Github, Instagram, Linkedin } from '@emotion-icons/fa-brands';
-import { Box, Icon, IconButton } from '@mui/material';
+import { Icon, IconButton } from '@mui/material';
 
 interface LinksProps {
   github?: string;
