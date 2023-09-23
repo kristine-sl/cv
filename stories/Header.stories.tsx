@@ -7,8 +7,9 @@ export default {
 
 export const Default = () => (
   <Header
-    linkedIn="https://www.linkedin.com/in/kristinesundtlorentzen/"
-    github="https://github.com/kristine-sl/cv"
+    linkedIn="https://www.linkedin.com/"
+    github="https://github.com/"
+    instagram="https://www.instagram.com/"
     email="kristine.sundt.lorentzen@gmail.com"
     theme="light"
     toggleTheme={() => {}}
