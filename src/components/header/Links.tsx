@@ -8,7 +8,7 @@ interface LinksProps {
 }
 
 export const Links = ({ github, linkedIn, instagram }: LinksProps) => (
-  <Box style={{ display: 'flex', height: '100%' }}>
+  <Box sx={{ display: 'flex', height: '100%' }}>
     {linkedIn && (
       <IconButton href={linkedIn} color="secondary" aria-label="LinkedIn">
         <Icon component={Linkedin} />
