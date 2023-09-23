@@ -4,5 +4,6 @@ export * from './Category';
 export * from './CategoryContext';
 export * from './categoryData';
 export * from './CategoryHeader';
+export * from './gallery';
 export * from './list';
 export * from './timeline';

@@ -18,4 +18,8 @@ export type CategoryData = {
         type: 'list';
         data: string[];
       }
+    | {
+        type: 'gallery';
+        data: { img: string; title: string }[];
+      }
   );
