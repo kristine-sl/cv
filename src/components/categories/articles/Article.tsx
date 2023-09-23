@@ -53,7 +53,6 @@ export const Article = ({ article, index }: ArticleProps) => {
         sx={{ mb: 2, display: 'flex', alignItems: 'center' }}
       >
         <Box sx={{ whiteSpace: 'nowrap', display: 'flex' }}>
-          <span>Hei</span>
           <span suppressHydrationWarning>
             {capitalizeFirstLetter(
               new Date(article.startDate).toLocaleDateString(
