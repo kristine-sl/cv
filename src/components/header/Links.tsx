@@ -24,5 +24,10 @@ export const Links = ({ github, linkedIn, instagram }: LinksProps) => (
         <Icon component={Github} />
       </IconButton>
     )}
+    {instagram && (
+      <IconButton href={instagram} color="secondary" aria-label="Instagram">
+        <Icon component={Instagram} />
+      </IconButton>
+    )}
   </>
 );
