@@ -1,4 +1,4 @@
-import { ImageList, ImageListItem } from '@mui/material';
+import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import { useCategoryHeader } from '../CategoryContext';
 import { CategoryHeader } from '../CategoryHeader';
 
@@ -20,6 +20,10 @@ export const Gallery = ({ data }: GalleryProps) => {
               src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
               alt={item.title}
               loading="lazy"
+            />
+            <ImageListItemBar
+              title={<a href="www.vg.no">{item.title}</a>}
+              position="below"
             />
           </ImageListItem>
         ))}
