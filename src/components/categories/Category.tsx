@@ -11,7 +11,7 @@ export const Category = ({ children, header, icon }: CategoryProps) => {
   return (
     <CategoryContext.Provider value={{ header, icon }}>
       <Card sx={{ '@media print': { m: 0, boxShadow: 0 } }}>
-        <CardContent>{children}</CardContent>
+        <CardContent suppressHydrationWarning>{children}</CardContent>
       </Card>
     </CategoryContext.Provider>
   );
