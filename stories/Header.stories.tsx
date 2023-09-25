@@ -1,3 +1,4 @@
+import React from 'react';
 import { Header } from '../src';
 
 export default {
@@ -11,6 +12,7 @@ export const Default = () => (
     github="https://github.com/"
     instagram="https://www.instagram.com/"
     email="kristine.sundt.lorentzen@gmail.com"
+    headerLinks={['/prosjekt1', '/prosjekt2', '/prosjekt3']}
     theme="light"
     toggleTheme={() => {}}
     locale="en"
