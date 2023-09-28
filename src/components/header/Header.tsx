@@ -1,4 +1,5 @@
-import { AppBar, Box, Toolbar, Menu, MenuItem } from '@mui/material';
+import { AppBar, Box, Toolbar, Menu, MenuItem, IconButton } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { LocalizationProps, ThemeToggleProps } from '.';
 import { Contact } from './Contact';
 import { CustomButton } from './CustomButton';
@@ -14,6 +15,7 @@ export type HeaderProps = {
   instagram?: string;
   headerLinks?: string[]
   email?: string;
+  subsite?: boolean;
 } & LocalizationProps &
   ThemeToggleProps;
 
@@ -23,6 +25,7 @@ export const Header = ({
   instagram,
   headerLinks,
   email,
+  subsite,
   theme,
   toggleTheme,
   ...localizationProps
@@ -42,42 +45,76 @@ export const Header = ({
       elevation={1}
       sx={{ bgcolor: 'background.paper', displayPrint: 'none' }}
     >
-      <Toolbar sx={{ gap: 1 }}>
-        {(github || linkedIn || instagram) && (
+        <Toolbar sx={{ gap: 1 }}>
+        {subsite ? (
           <>
-            <Links github={github} linkedIn={linkedIn} instagram={instagram} />
-            <Box sx={{ flexGrow: 1 }} />
+            <IconButton edge="start" color="primary" aria-label="back" onClick={() => window.history.back()}>
+              <ArrowBackIcon />
+            </IconButton>
+            {headerLinks && headerLinks.length > 0 && (
+              <>
+                <CustomButton
+                  id="basic-button"
+                  onClick={handleClick}
+                  messageId="header.portfolio"
+                />
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose}
+                  MenuListProps={{
+                    'aria-labelledby': 'basic-button',
+                  }}
+                >
+                  {headerLinks.map((link, index) => (
+                    <MenuItem key={index} onClick={handleClose} component="a" href={link}>
+                      {link.replace('/', '').replace('-', ' ')}
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </>
+            )}
+          </>
+        ) : (
+          <>
+            {(github || linkedIn || instagram) && (
+              <>
+                <Links github={github} linkedIn={linkedIn} instagram={instagram} />
+                <Box sx={{ flexGrow: 1 }} />
+              </>
+            )}
+            {headerLinks && headerLinks.length > 0 && (
+              <>
+                <CustomButton
+                  id="basic-button"
+                  onClick={handleClick}
+                  messageId="header.portfolio"
+                />
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose}
+                  MenuListProps={{
+                    'aria-labelledby': 'basic-button',
+                  }}
+                >
+                  {headerLinks.map((link, index) => (
+                    <MenuItem key={index} onClick={handleClose} component="a" href={link}>
+                      {link.replace('/', '').replace('-', ' ')}
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </>
+            )}
+            {email && <Contact email={email} />}
+            <Box sx={{ flexGrow: 1, display: { sm: 'none' } }} />
+            <Localization {...localizationProps} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+            <Formats sx={{ display: { xs: 'none', sm: 'block' }, ml: -1 }} /> 
           </>
         )}
-         {headerLinks && headerLinks.length > 0 && (
-          <>
-            <CustomButton
-              id="basic-button"
-              onClick={handleClick}
-              messageId="header.portfolio"
-            />
-            <Menu
-              id="basic-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                'aria-labelledby': 'basic-button',
-              }}
-            >
-              {headerLinks.map((link, index) => (
-                <MenuItem key={index} onClick={handleClose} component="a" href={link}>
-                  {link.replace('/', '').replace('-', ' ')}
-                </MenuItem>
-              ))}
-            </Menu>
-          </>
-        )}
-        {email && <Contact email={email} />}
-        <Box sx={{ flexGrow: 1, display: { sm: 'none' } }} />
-        <Localization {...localizationProps} />
-        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-        <Formats sx={{ display: { xs: 'none', sm: 'block' }, ml: -1 }} /> 
       </Toolbar>
     </AppBar>
   );
