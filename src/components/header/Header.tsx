@@ -48,7 +48,7 @@ export const Header = ({
         <Toolbar sx={{ gap: 1 }}>
         {subsite ? (
           <>
-            <IconButton edge="start" color="primary" aria-label="back" onClick={() => window.location.assign('/')}>
+            <IconButton edge="start" color="primary" aria-label="back" onClick={() => window.location.href = 'https://casparheide.me/'}>
               <ArrowBackIcon />
             </IconButton>
             {headerLinks && headerLinks.length > 0 && (
