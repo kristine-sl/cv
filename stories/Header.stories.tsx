@@ -7,15 +7,26 @@ export default {
 };
 
 export const Default = () => (
-  <Header
-    linkedIn="https://www.linkedin.com/"
-    github="https://github.com/"
-    instagram="https://www.instagram.com/"
-    email="kristine.sundt.lorentzen@gmail.com"
-    headerLinks={['/prosjekt1', '/prosjekt2', '/prosjekt3']}
-    theme="light"
-    toggleTheme={() => {}}
-    locale="en"
-    updateLocale={() => {}}
-  />
+  <>
+    <Header
+      linkedIn="https://www.linkedin.com/"
+      github="https://github.com/"
+      instagram="https://www.instagram.com/"
+      email="kristine.sundt.lorentzen@gmail.com"
+      headerLinks={['/prosjekt1', '/prosjekt2', '/prosjekt3']}
+      theme="light"
+      toggleTheme={() => {}}
+      locale="en"
+      updateLocale={() => {}}
+    />
+    <div style={{ height: '16px' }} />
+    <Header
+      headerLinks={['/prosjekt1', '/prosjekt2', '/prosjekt3']}
+      theme="light"
+      toggleTheme={() => {}}
+      locale="en"
+      updateLocale={() => {}}
+      subsite
+    />
+  </>
 );
